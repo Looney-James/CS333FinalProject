@@ -7,7 +7,7 @@ on:
     branches: [ main ]
 
 env:
-  IMAGE_NAME: cs333finaldemo
+  IMAGE_NAME: your_dockerhub_username/cs333finaldemo:latest
 
 jobs:
   build:
@@ -22,7 +22,7 @@ jobs:
       uses: docker/login-action@v1
       with:
         username: ssjlooney
-        password: dckr_pat_H25OEeye02awxmD7cGnqrcPhi9U
+        password: ${{ secrets.dckr_pat_iJfDnu-BDSHwNy7Ux7_ZtN9Ega0 }}
     - name: Push the Docker image
       run: docker push $IMAGE_NAME
 
